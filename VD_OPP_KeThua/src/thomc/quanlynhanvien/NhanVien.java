@@ -19,7 +19,11 @@ public double tinhLuong() {
     }
     @Override
 public String toString() {
-	return "NhanVien [maNV = " + maNV + ", hoTen = " + hoTen + ", luongCoBan = " + luongCoBan + "]";
+    	String ChuoiXuat="";
+    	ChuoiXuat = ChuoiXuat +"\nMã Nhân Viên  " + this.maNV ;
+    	ChuoiXuat = ChuoiXuat +"\nHọ Tên " + this.hoTen;
+    	ChuoiXuat = ChuoiXuat +"\nLương cơ bản " + this.luongCoBan;
+	return ChuoiXuat;
 }
 
 	public void hienthithongtin() {
@@ -27,4 +31,23 @@ public String toString() {
        System .out.println("Nhập họ tên: "+hoTen);
         System.out.println("Nhập lương cơ bản: "+luongCoBan);
     }
+	public String getMaNV() {
+		return maNV;
+	}
+	public void setMaNV(String maNV) {
+		this.maNV = maNV;
+	}
+	public String getHoTen() {
+		return hoTen;
+	}
+	public void setHoTen(String hoTen) {
+		this.hoTen = hoTen;
+	}
+	public double getLuongCoBan() {
+		return luongCoBan;
+	}
+	public void setLuongCoBan(double luongCoBan) {
+		this.luongCoBan = luongCoBan;
+	}
+	
 }
