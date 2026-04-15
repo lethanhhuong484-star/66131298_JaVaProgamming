@@ -1,0 +1,2 @@
+Xin chào tôi là Lê Thanh Hướng!
+Đọc ghi file bằng java!
