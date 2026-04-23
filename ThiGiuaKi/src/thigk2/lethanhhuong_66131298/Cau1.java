@@ -11,9 +11,11 @@ public class Cau1 {
 		double CC = sc.nextDouble();
 		System.out.print("Nhập cân nặng số kg : ");
 		double CN = sc.nextDouble();
+		
 		// tính chỉ số BMI
 		double BMI = CN / (CC * CC);
 		System.out.println("Chỉ số BMI của bạn là : " + BMI);
+		
 		// dùng if else để phân loại chỉ số BMI
 		if (BMI < 18.5) {
 			System.out.println("Bạn bị thiếu cân");
