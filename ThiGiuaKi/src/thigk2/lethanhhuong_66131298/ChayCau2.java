@@ -1,10 +1,11 @@
 package thigk2.lethanhhuong_66131298;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ChayCau2 {
  public static void main(String[] args) {
-	 
+	 Scanner sc = new Scanner(System.in);
 	 
 	 Cau2.sinhvien sv1 = new Cau2().new sinhvien("Nguyễn Văn Thức", 19, 2007);
 	 Cau2.sinhvien sv2 = new Cau2().new sinhvien("Trần Hữu Lượng", 20, 2006);
@@ -29,18 +30,38 @@ public class ChayCau2 {
 	  int N = 1;
 	  for (int i = 0; i < N; i++) {
 		  Cau2.sinhvien sv = new Cau2().new sinhvien();
+		  
 		  System.out.print("Nhập tên sinh viên thêm: ");
-		  String tensv = System.console().readLine();
+		  String tensv = sc.nextLine();
 		  sv.setTen(tensv);
+		  
 		  System.out.print("Nhập tuổi sinh viên thêm: ");
-		  int tuoisv = Integer.parseInt(System.console().readLine());
+		  int tuoisv = sc.nextInt();
+		  sc.nextLine(); // Đọc bỏ dòng mới sau khi nhập số
 		  sv.setTuoi(tuoisv);
+		  
 		  System.out.print("Nhập năm sinh sinh viên thêm: ");
 		  double namsinhsv = Double.parseDouble(System.console().readLine());
-		  sv.setNamsinh(namsinhsv);
+		  sv.setNamsinh(namsinhsv);		  
 		  sinhvienList.add(sv);
 		  
+		  for (Cau2.sinhvien sinhvien : sinhvienList) {
+			  System.out.println("\nThông tin sinh viên thêm:");
+			  System.out.println("Tên: " + sinhvien.getTen());
+			  System.out.println("Tuổi: " + sinhvien.getTuoi());
+			  System.out.println("Năm sinh: " + sinhvien.getNamsinh());
+		  }
 		  
+		  System.out.println("\nDanh sách sinh viên:");
+		  for (Cau2.sinhvien sinhvien : sinhvienList) {
+			  System.out.println("Tên: " + sinhvien.getTen() + ", Tuổi: " + sinhvien.getTuoi() + ", Năm sinh: " + sinhvien.getNamsinh());
+		  }
+		  System.out.println("\n Sinh viên lớn hơn 20 tuổi:");
+		  for (Cau2.sinhvien sinhvien : sinhvienList) {
+			  if (sinhvien.getTuoi() > 20) {
+				  System.out.println("Tên: " + sinhvien.getTen() + ", Tuổi: " + sinhvien.getTuoi() + ", Năm sinh: " + sinhvien.getNamsinh());
+			  }
+		  }
 	  }
  }
 }
